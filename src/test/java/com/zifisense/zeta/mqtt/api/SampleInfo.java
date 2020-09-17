@@ -13,15 +13,15 @@ import com.zifisense.zeta.mqtt.api.model.ZifiTopic;
  * @date 2020年9月16日
  */
 public class SampleInfo {
-//	public static final String API_KEY = "c6d8e5d10c6a4a5e8d9666ffd4c54d7c";
-//	public static final String SECRET_KEY = "91b7dcb079cf4040afd6e9b8146151d6";
-//	public static final String HOST_NAME = "tcp://test-cn.zifisense.com:1883";
-//	public static final String CLIENT_ID = new Random().nextInt(999)+"" ;
-
-	public static final String API_KEY = "c4ca4238a0b923820dcc509a6f75849b";
-	public static final String SECRET_KEY = "c81e728d9d4c2f636f067f89cc14862c";
-	public static final String HOST_NAME = "tcp://192.168.0.12:1883";
+	public static final String API_KEY = "c6d8e5d10c6a4a5e8d9666ffd4c54d7c";
+	public static final String SECRET_KEY = "91b7dcb079cf4040afd6e9b8146151d6";
+	public static final String HOST_NAME = "tcp://test-cn.zifisense.com:1883";
 	public static final String CLIENT_ID = new Random().nextInt(999)+"" ;
+
+//	public static final String API_KEY = "c4ca4238a0b923820dcc509a6f75849b";
+//	public static final String SECRET_KEY = "c81e728d9d4c2f636f067f89cc14862c";
+//	public static final String HOST_NAME = "tcp://192.168.0.12:1883";
+//	public static final String CLIENT_ID = new Random().nextInt(999)+"" ;
 	
 	public static final ZifiTopic[] TOPIC_ALL = { TopicList.TOPIC_ALL };
 	public static final ZifiTopic[] TOPIC_AP_ALL = { TopicList.TOPIC_AP_ALL };
