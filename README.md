@@ -2,7 +2,7 @@
 
 Common lib for Zeta Java mqttclient.
 
-** 注意：通配符订阅只支持mqtt3.1协议 **
+**注意：通配符订阅只支持mqtt3.1协议**
 fusesource库默认mqtt协议版本为3.1
 paho库默认mqtt协议版本为3.1.1，如需进行通配符订阅，需显式指定mqtt协议版本为3.1
 
