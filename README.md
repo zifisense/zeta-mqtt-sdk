@@ -36,6 +36,9 @@ python sub.py
 - sub.py代码：
 ```
 import paho.mqtt.client as mqtt
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 def on_connect(client, userdata, flags, rc):
         print("Connected with result code: " + str(rc))
@@ -43,7 +46,7 @@ def on_connect(client, userdata, flags, rc):
 def on_message(client, userdata, msg):
         print(msg.topic + " " + str(msg.payload))
 
-client = mqtt.Client('用户名apikey:密码secretkey+随机数', transport='tcp')
+client = mqtt.Client('用户名apikey:密码secretkey+随机数', clean_session=True, userdata=None, protocol=3, transport="tcp") #指定mqtt协议为3.1版本，满足模糊匹配需求
 client.username_pw_set('用户名apikey', password='密码secretkey')
 client.on_connect = on_connect
 client.on_message = on_message
