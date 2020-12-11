@@ -33,7 +33,7 @@ sudo yum -y install python-pip
 pip install paho.mqtt
 python sub.py 
 ```
-
+- sub.py代码：
 ```
 import paho.mqtt.client as mqtt
 
