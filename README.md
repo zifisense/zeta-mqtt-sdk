@@ -30,7 +30,7 @@ https://github.com/eclipse/paho.mqtt.java
 ```
 mkdir subExample
 sudo yum -y install python-pip
-pip install paho-mqtt
+sudo pip install paho-mqtt
 python sub.py 
 ```
 - sub.py代码：
