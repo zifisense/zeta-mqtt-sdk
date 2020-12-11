@@ -24,3 +24,31 @@ https://github.com/eclipse/paho.mqtt.java
 - Zifi封装后的调用示例：
 /zeta-mqtt-sdk/src/test/java/com/zifisense/zeta/mqtt/api/paho/ExeSample.java
 
+
+### python简单连接订阅示例：
+- 前提准备：
+```
+mkdir subExample
+sudo yum -y install python-pip
+pip install paho.mqtt
+python sub.py 
+```
+
+```
+import paho.mqtt.client as mqtt
+
+def on_connect(client, userdata, flags, rc):
+        print("Connected with result code: " + str(rc))
+
+def on_message(client, userdata, msg):
+        print(msg.topic + " " + str(msg.payload))
+
+client = mqtt.Client('用户名apikey:密码secretkey+随机数', transport='tcp')
+client.username_pw_set('用户名apikey', password='密码secretkey')
+client.on_connect = on_connect
+client.on_message = on_message
+client.connect('连接地址host', 1883, 60)
+client.subscribe('#', qos=0)  #订阅的topic
+client.loop_forever()
+```
+
